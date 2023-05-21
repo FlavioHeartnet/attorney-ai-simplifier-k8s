@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: attorney-ai-simplifier
+spec:
+  selector:
+    matchLabels:
+      app: attorney-ai-simplifier
+  template:
+    metadata:
+      labels:
+        app: attorney-ai-simplifier
+    spec:
+      containers:
+      - name: attorney-ai-simplifier
+        image: attorney-ai-simplifier
+        ports:
+        - containerPort: 8080
